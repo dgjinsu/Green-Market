@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dgjinsu/green-market-config-server.git
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_PWD}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
