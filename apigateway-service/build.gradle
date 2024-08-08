@@ -34,6 +34,26 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// jjwt
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.5'
+
+	// spring cloud config
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+
+	// actuator
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	// spring cloud bus
+//	implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
+
+	// bootstrap
+	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+
+	// micrometer
+	implementation 'io.micrometer:micrometer-registry-prometheus'
 }
 
 dependencyManagement {
