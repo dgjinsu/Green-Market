@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: basket-service
+    name: order-service
 
 eureka:
   instance:
