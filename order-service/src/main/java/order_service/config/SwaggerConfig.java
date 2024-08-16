@@ -1,4 +1,4 @@
-package user_service.config;
+package order_service.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @OpenAPIDefinition(
-    info = @Info(title = "green-market user-service API 명세서",
+    info = @Info(title = "green-market order-service API 명세서",
         version = "v1"))
 @Configuration
 public class SwaggerConfig {

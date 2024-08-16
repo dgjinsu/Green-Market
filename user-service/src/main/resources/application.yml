@@ -34,7 +34,7 @@ springdoc:
   api-docs:
     version: openapi_3_1
     enabled: true
-    path: user-service/v3/api-docs
+    path: /user-service/v3/api-docs
   enable-spring-security: true
   default-consumes-media-type: application/json
   default-produces-media-type: application/json
