@@ -1,4 +1,4 @@
-package user_service.security;
+package user_service.security.filter;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -56,5 +56,30 @@ public class JwtTokenProvider {
         }
 
         return jwtBuilder.compact();
+    }
+
+    /**
+     * 복호화
+     */
+    public Claims get(String jwt) throws JwtException {
+        return Jwts
+            .parserBuilder()
+            .setSigningKey(key)
+            .build()
+            .parseClaimsJws(jwt)
+            .getBody();
+    }
+
+    /**
+     * 토큰 만료 여부 체크
+     * @return true : 만료됨, false : 만료되지 않음
+     */
+    public boolean isExpiration(String jwt) throws JwtException {
+        log.info("토큰 만료 여부 체크");
+        try {
+            return get(jwt).getExpiration().before(new Date());
+        } catch (ExpiredJwtException e) {
+            return true;
+        }
     }
 }

@@ -13,7 +13,7 @@ import user_service.entity.User;
 import user_service.exception.ErrorCode;
 import user_service.exception.GreenMarketException;
 import user_service.repository.UserRepository;
-import user_service.security.JwtTokenProvider;
+import user_service.security.filter.JwtTokenProvider;
 
 @Service
 @RequiredArgsConstructor
